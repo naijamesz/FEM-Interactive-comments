@@ -1,0 +1,56 @@
+:root {
+  --moderate-blue: hsl(238, 40%, 52%);
+  --soft-red: hsl(358, 79%, 66%);
+  --light-grayish-blue: hsl(239, 57%, 85%);
+
+  --dark-blue: hsl(212, 24%, 26%);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: hsl(223, 19%, 93%);
+  --very-light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --white-pale: white;
+
+  --indent-color: hsl(0, 0%, 83%);
+  --overlay: rgba(0, 0, 0, 0.3);
+}
+
+$bp-medium: 700px;
+$bp-small: 300px;
+$bp-very-small: 250px;
+
+html {
+  @media screen and (max-width: $bp-small) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $bp-very-small) {
+    font-size: 11px;
+  }
+}
+
+::selection {
+  background-color: var(--moderate-blue);
+  color: var(--white);
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--moderate-blue) var(--light-gray);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--moderate-blue);
+  border-radius: 20px;
+  border: 3px solid var(--light-gray);
+}

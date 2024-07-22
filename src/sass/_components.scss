@@ -1,0 +1,104 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: calc(100% - 2rem);
+  max-width: 22rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+
+  z-index: 100;
+
+  h1 {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--grayish-blue);
+    margin-bottom: 1rem;
+  }
+
+  .modal-btns-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .btn-no {
+    background-color: var(--grayish-blue);
+  }
+
+  .btn-yes {
+    background-color: var(--soft-red);
+  }
+}
+
+.overlay {
+  background-color: var(--overlay);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+//////////
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.comment {
+  animation-name: fading;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.18, 1);
+  animation-iteration-count: 1;
+  animation-duration: 0.7s;
+}
+
+.update-comment {
+  animation-duration: 0.3s;
+}
+
+.write-comment {
+  animation-name: fading;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.18, 1);
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+}
+
+@keyframes fading {
+  0% {
+    transform: scale(0.8) translateY(-2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
