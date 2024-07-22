@@ -1,0 +1,19 @@
+{
+  "name": "interactive-comments",
+  "version": "1.0.0",
+  "description": "Interactive comments",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "css-loader": "^6.11.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^13.3.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

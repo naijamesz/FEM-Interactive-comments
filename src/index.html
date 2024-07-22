@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="author" content="James Thanawat" />
+    <meta name="title" content="Interactive comments section by Frontend Mentor" />
+    <meta name="description" content="Nested comment section with Vanilla JS" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Interactive comments section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <meta
+      name="keywords"
+      content="Nested comments, MVC pattern CRUD app, Comment and reply system, Responsive design, Frontend development, JavaScript project, FrontendMentor project"
+    />
+    <!--Icon favicon-->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <!-- link to bundle js files -->
+    <script defer src="./bundles/controller.js"></script>
+    <link rel="stylesheet" href="./bundles/main.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+    <div class="dark-mode-container">
+      <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox" />
+      <label for="dark-mode-checkbox" class="dark-mode-lebel"></label>
+    </div>
+    <!--  -->
+    <main>
+      <div class="container">
+        <div class="all-comments-container"></div>
+
+        <!-- New comment -->
+        <div class="write-comment new-comment">
+          <div class="write-comment-avater">
+            <img src="./images/avatars/image-juliusomo.png" alt="Juliusomo's photo" />
+          </div>
+
+          <textarea
+            class="write-comment-field write-main-comment-field"
+            rows="3"
+            placeholder="Add a comment..."
+          ></textarea>
+
+          <button class="write-comment-btn write-main-comment-btn" type="button">Send</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <!-- Pull dynamic content from the data.json file -->
+      <div class="attribution">
+        <span>
+          Challenge by
+          <a class="attb-link attb-fem" href="https://www.frontendmentor.io/profile/naijamesz" target="_blank"
+            >Frontend Mentor.</a
+          >
+        </span>
+        <span>
+          Coded by
+          <a class="attb-link" href="https://www.github.com/naijamesz" target="_blank">James Thanawat</a>.
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
